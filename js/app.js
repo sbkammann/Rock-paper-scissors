@@ -49,15 +49,15 @@ function selectCard(){
 }
 
 function win(){
-    message.style.color = "green";
-    message.innerText ="You win!";
+  message.classList.toggle("win");
+  message.innerText ="You win!";
 }
 function draw(){
-  message.style.color = "black";
+  message.classList.toggle("draw");
   message.innerText ="Draw";
 }
 function lose(){
-  message.style.color = "red";
+  message.classList.toggle("lose");
   message.innerText ="You lose...";
 }
 
@@ -71,4 +71,7 @@ function flipping(){
    flipCardThree.style.transform = 'rotateY(0deg)';
    previousSelection.style.boxShadow = "0px 0px 0px white";
    message.innerText = '';
+   message.classList.remove("win");
+   message.classList.remove("lose");
+   message.classList.remove("draw");
  }

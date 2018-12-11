@@ -97,6 +97,20 @@
 	position: relative;
 	top: 600px;
 }
+
+.win {
+	color: green;
+	font-family: 'Pacifico', cursive;
+}
+.lose {
+	color: red;
+	font-family: 'Covered By Your Grace', cursive;
+}
+.draw {
+	color: black;
+	font-family: Arial;
+}
+
 /* #rock{
   box-shadow: 5px 5px 5px red;
 } */
