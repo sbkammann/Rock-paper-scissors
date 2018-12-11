@@ -1,4 +1,65 @@
-#container{
+/* rotate opponent card*/
+.container {
+	perspective: 1000px;
+  position: absolute;
+  height: 128px;
+  width: 128px;
+  z-index: -1;
+}
+
+.flipCard {
+  height: 128px;
+  width: 128px;
+	transition: 0.8s;
+	transform-style: preserve-3d;
+  position: absolute;
+  z-index: 0;
+}
+
+.front,
+.back {
+	backface-visibility: hidden;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+  position: absolute;
+  top: 0;
+}
+
+.back {
+  height: 128px;
+  width: 128px;
+  z-index: 1;
+  position: relative;
+	transform: rotateY(-180deg);
+}
+
+/* regular css*/
+/* :root{
+  --top-position-px: 90px;
+  --left-position-percent: 25%;
+} */
+#one {
+  /* top: var(--top-position-px);
+  left: var(--left-position-percent); */
+  top: 100px;
+  left: 200px;
+}
+#two {
+  /* top: var(--top-position-px);
+  left: calc(var(--left-position-percent) + 6%); */
+  top: 100px;
+  left: 310px;
+}
+#three {
+  /* top: var(--top-position-px);
+  left: calc(var(--left-position-percent) + 12%); */
+  top: 100px;
+  left: 420px;
+}
+#box{
   margin: auto;
   width: 50%;
 }
@@ -12,11 +73,11 @@
   border: solid 2px black;
   margin: 5px;
 }
-button {
+/* button {
   position: absolute;
   top: 270px;
   left: 41%;
-}
+} */
 #player{
   position: absolute;
   top: 400px;

@@ -7,16 +7,37 @@ const arr = [ [draw, lose, win],
               [lose, win, draw]];
 
 //random number generator to select opponent card
-function selectOpponentCard(){
-   const opponentCard = Math.floor((Math.random() * 3));
-   console.log(opponentCard);
-}
+const go = document.getElementById('go');
+const newGame = document.getElementById('newGame');
+const flipCardOne = document.getElementById('one').firstElementChild;
+const flipCardTwo = document.getElementById('two').firstElementChild;
+const flipCardThree = document.getElementById('three').firstElementChild;
 const player = document.getElementById('player');
-player.addEventListener('click', print);
-function print(){
-  console.log(event.target.parentElement.getAttribute('value'));
-  //need to grab a number based on card chosed and plug it in arr
-  //random number generator to select opponent card
+let playerCard;
+player.addEventListener('click', selectCard);
+go.addEventListener('click', evaluate);
+
+function evaluate(){
+  const opponentCard = Math.floor((Math.random() * 3));
+  console.log(opponentCard);
+  switch (opponentCard) {
+    case 0:
+    flipCardOne.style.transform = 'rotateY(180deg)';
+    break;
+    case 1:
+    flipCardTwo.style.transform = 'rotateY(180deg)';
+    break;
+    case 2:
+    flipCardThree.style.transform = 'rotateY(180deg)';
+    break;
+  }
+  arr[playerCard][opponentCard]();
+}
+
+function selectCard(){
+  playerCard = event.target.parentElement.getAttribute('value');
+  console.log(playerCard);
+  return playerCard; // refactor into one line? ^
 }
 
 function win(){
@@ -28,3 +49,9 @@ function draw(){
 function lose(){
   console.log("lose");
 }
+
+function flipping(){
+    // flipCard.style.transform = 'rotateY(0deg)';
+    flipCard.style.transform = 'rotateY(180deg)';
+
+ }
