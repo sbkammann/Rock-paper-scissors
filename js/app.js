@@ -13,6 +13,8 @@ const flipCardOne = document.getElementById('one').firstElementChild;
 const flipCardTwo = document.getElementById('two').firstElementChild;
 const flipCardThree = document.getElementById('three').firstElementChild;
 const player = document.getElementById('player');
+const message = document.getElementById('message');
+
 let playerCard;
 let previousSelection = document.getElementById('one'); //random assignment so it doesn't throw error on first run
 player.addEventListener('click', selectCard);
@@ -47,13 +49,16 @@ function selectCard(){
 }
 
 function win(){
-    console.log("win");
+    message.style.color = "green";
+    message.innerText ="You win!";
 }
 function draw(){
-  console.log("draw");
+  message.style.color = "black";
+  message.innerText ="Draw";
 }
 function lose(){
-  console.log("lose");
+  message.style.color = "red";
+  message.innerText ="You lose...";
 }
 
 function flipping(){
@@ -65,4 +70,5 @@ function flipping(){
    flipCardTwo.style.transform = 'rotateY(0deg)';
    flipCardThree.style.transform = 'rotateY(0deg)';
    previousSelection.style.boxShadow = "0px 0px 0px white";
+   message.innerText = '';
  }

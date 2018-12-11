@@ -91,6 +91,12 @@
   border: solid 2px black;
   margin: 5px;
 }
+
+#message {
+	font-size: 80px;
+	position: relative;
+	top: 600px;
+}
 /* #rock{
   box-shadow: 5px 5px 5px red;
 } */
