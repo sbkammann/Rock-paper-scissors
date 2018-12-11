@@ -29,11 +29,12 @@
 }
 
 .back {
-  height: 128px;
-  width: 128px;
+  height: 150px;
+  width: 100px;
   z-index: 1;
   position: relative;
 	transform: rotateY(-180deg);
+  border: solid 2px black;
 }
 
 /* regular css*/
@@ -90,3 +91,6 @@
   border: solid 2px black;
   margin: 5px;
 }
+/* #rock{
+  box-shadow: 5px 5px 5px red;
+} */
