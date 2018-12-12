@@ -64,13 +64,15 @@ function evaluate(){
 }
 
 function selectCard(){
-  previousSelection.style.boxShadow = "0px 0px 0px white";
-  playerCard = event.target.parentElement.getAttribute('value');
-  previousSelection = document.getElementById(event.target.parentElement.id);
-  document.getElementById(String(event.target.parentElement.id)).style.boxShadow = "5px 5px 5px red";
-//need to null the previous selection
-  console.log(playerCard);
-  return playerCard; // refactor into one line? ^
+  if(event.target.getAttribute('class') === "clickable"){
+    console.log(event.target.getAttribute('class'));
+    previousSelection.style.boxShadow = "0px 0px 0px white";
+    playerCard = event.target.parentElement.getAttribute('value');
+    previousSelection = document.getElementById(event.target.parentElement.id);
+    document.getElementById(String(event.target.parentElement.id)).style.boxShadow = "5px 5px 5px red";
+    console.log(playerCard);
+    return playerCard; // refactor into one line? ^
+  }
 }
 
 function win(){
@@ -106,5 +108,5 @@ function flipping(){
    message.classList.remove("win");
    message.classList.remove("lose");
    message.classList.remove("draw");
-   isReset = true; 
+   isReset = true;
  }
