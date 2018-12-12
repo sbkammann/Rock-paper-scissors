@@ -46,7 +46,6 @@ newGame.addEventListener('click', reset);
 function evaluate(){
   if (isReset){
     const opponentCard = Math.floor((Math.random() * 3));
-    console.log(opponentCard);
     switch (opponentCard) {
       case 0:
       flipCardOne.style.transform = 'rotateY(180deg)';
@@ -65,12 +64,10 @@ function evaluate(){
 
 function selectCard(){
   if(event.target.getAttribute('class') === "clickable"){
-    console.log(event.target.getAttribute('class'));
     previousSelection.style.boxShadow = "0px 0px 0px white";
     playerCard = event.target.parentElement.getAttribute('value');
     previousSelection = document.getElementById(event.target.parentElement.id);
     document.getElementById(String(event.target.parentElement.id)).style.boxShadow = "5px 5px 5px red";
-    console.log(playerCard);
     return playerCard; // refactor into one line? ^
   }
 }

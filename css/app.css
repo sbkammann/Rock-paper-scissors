@@ -2,13 +2,13 @@
 .container {
 	perspective: 1000px;
   position: absolute;
-  height: 128px;
-  width: 128px;
+	height: 150px;
+  width: 100px;
   z-index: -1;
 }
 .flipCard {
-  height: 128px;
-  width: 128px;
+	height: 150px;
+	width: 100px;
 	transition: 0.8s;
 	transform-style: preserve-3d;
   position: absolute;
@@ -22,13 +22,18 @@
 	z-index: 2;
 	transform: rotateY(0deg);
   position: absolute;
-  top: 0;
+  /* top: 0; */
+	height: 150px;
+	width: 100px;
+	border: solid 2px black;
+	/* margin: 5px; */
 }
 .back {
   height: 150px;
   width: 100px;
   z-index: 1;
-  position: relative;
+  /* position: relative; */
+	position: absolute;
 	transform: rotateY(-180deg);
   border: solid 2px black;
 }
