@@ -51,14 +51,7 @@
   border: solid 2px black;
   margin: 5px;
 }
-.buttonBox{
-	position: relative;
-	top: 300px;
-	width: 305px;
-	left: auto;
-	margin-right: auto;
-	margin-left: auto;
-}
+
  button {
 	 width: 150px;
 	 height: 30px;
@@ -108,14 +101,22 @@ h1 {
 }
 .spanBox{
 	position: relative;
-	top: 290px;
+	top: 270px;
 	width: 260px;
 	left: auto;
 	margin-right: auto;
 	margin-left: auto;
 }
+.buttonBox{
+	position: relative;
+	top: 280px;
+	width: 305px;
+	left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
 span {
-	padding-right: 20px;
+	margin-right: 20px;
 	font-size: 16px;
 	font-family: Arial;
 	font-weight: bold;
