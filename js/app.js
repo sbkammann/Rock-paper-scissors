@@ -3,7 +3,7 @@ const arr = [ [draw, lose, win],
               [win, draw, lose],
               [lose, win, draw]];
 
-//random number generator to select opponent card
+
 const go = document.getElementById('go');
 const newGame = document.getElementById('newGame');
 const flipCardOne = document.getElementById('one').firstElementChild;
@@ -25,13 +25,8 @@ let isReset = true;
 //place opponent cards
 let picWidth = 100;
 let spaceTop = 12;
-let spaceLeft = 15; //8
-// if (window.innerWidth < 530){
-//   picWidth = 65;
-//   spaceTop = 0;
-//   spaceLeft = 0;
-// }
-//create addEventListener for changing window size
+let spaceLeft = 15;
+
 const margin = (window.innerWidth - (picWidth*4))/2;
 for (let i=0; i<containerArr.length; i++){
   containerArr[i].style.left = (i * (picWidth + spaceLeft) + margin + 25).toString() + 'px';
@@ -68,14 +63,13 @@ function selectCard(){
     playerCard = event.target.parentElement.getAttribute('value');
     previousSelection = document.getElementById(event.target.parentElement.id);
     document.getElementById(String(event.target.parentElement.id)).style.boxShadow = "5px 5px 5px red";
-    return playerCard; // refactor into one line? ^
+    return playerCard;
   }
 }
 
 function win(){
   winCount++;
   winSpan.innerText = `Win: ${winCount}`;
-//combine top two lines?
   message.classList.toggle("win");
   message.innerText ="You win!";
 }
@@ -93,7 +87,6 @@ function lose(){
 }
 
 function flipping(){
-    // flipCard.style.transform = 'rotateY(0deg)';
     flipCard.style.transform = 'rotateY(180deg)';
  }
  function reset(){

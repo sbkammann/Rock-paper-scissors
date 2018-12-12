@@ -22,17 +22,14 @@
 	z-index: 2;
 	transform: rotateY(0deg);
   position: absolute;
-  /* top: 0; */
 	height: 150px;
 	width: 100px;
 	border: solid 2px black;
-	/* margin: 5px; */
 }
 .back {
   height: 150px;
   width: 100px;
   z-index: 1;
-  /* position: relative; */
 	position: absolute;
 	transform: rotateY(-180deg);
   border: solid 2px black;
@@ -51,7 +48,6 @@
   border: solid 2px black;
   margin: 5px;
 }
-
  button {
 	 width: 150px;
 	 height: 30px;
@@ -67,7 +63,7 @@ h1 {
 	text-decoration: underline;
 }
 #player{
-  position: relative; /* ans */
+  position: relative; 
   top: 400px;
   display: flex;
   flex-direction: row;
