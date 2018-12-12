@@ -1,5 +1,7 @@
-//event listeners for player card and then go button
-// win draw lose function
+
+
+
+
 
 //determines whether the player has won or not
 const arr = [ [draw, lose, win],
@@ -14,6 +16,28 @@ const flipCardTwo = document.getElementById('two').firstElementChild;
 const flipCardThree = document.getElementById('three').firstElementChild;
 const player = document.getElementById('player');
 const message = document.getElementById('message');
+const containerOne = document.getElementById('one');
+const containerTwo = document.getElementById('two');
+const containerThree = document.getElementById('three');
+const containerArr = [containerOne, containerTwo, containerThree];
+
+//place opponent cards
+//set position
+//height: 150px;
+
+let picWidth = 100;
+let spaceTop = 12;
+let spaceLeft = 15; //8
+// if (window.innerWidth < 530){
+//   picWidth = 65;
+//   spaceTop = 0;
+//   spaceLeft = 0;
+// }
+//create addEventListener for changing window size
+const margin = (window.innerWidth - (picWidth*4))/2;
+for (let i=0; i<containerArr.length; i++){
+  containerArr[i].style.left = (i * (picWidth + spaceLeft) + margin + 25).toString() + 'px';
+}
 
 let playerCard;
 let previousSelection = document.getElementById('one'); //random assignment so it doesn't throw error on first run

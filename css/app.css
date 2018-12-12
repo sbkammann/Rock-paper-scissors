@@ -37,29 +37,6 @@
   border: solid 2px black;
 }
 
-/* regular css*/
-/* :root{
-  --top-position-px: 90px;
-  --left-position-percent: 25%;
-} */
-#one {
-  /* top: var(--top-position-px);
-  left: var(--left-position-percent); */
-  top: 100px;
-  left: 200px;
-}
-#two {
-  /* top: var(--top-position-px);
-  left: calc(var(--left-position-percent) + 6%); */
-  top: 100px;
-  left: 310px;
-}
-#three {
-  /* top: var(--top-position-px);
-  left: calc(var(--left-position-percent) + 12%); */
-  top: 100px;
-  left: 420px;
-}
 #box{
   margin: auto;
   width: 50%;
@@ -74,16 +51,36 @@
   border: solid 2px black;
   margin: 5px;
 }
-/* button {
-  position: absolute;
-  top: 270px;
-  left: 41%;
-} */
+.buttonBox{
+	position: relative;
+	top: 300px;
+	width: 305px;
+	left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+ button {
+	 width: 150px;
+	 height: 30px;
+	 background-color: light-gray;
+	 color: black;
+	 border: 2px solid black;
+	 font-size: 20px;
+}
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Shrikhand', cursive;
+	text-decoration: underline;
+}
 #player{
-  position: absolute;
+  position: relative; /* ans */
   top: 400px;
   display: flex;
   flex-direction: row;
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .pCard {
   height: 150px;
@@ -91,13 +88,12 @@
   border: solid 2px black;
   margin: 5px;
 }
-
 #message {
 	font-size: 80px;
 	position: relative;
-	top: 600px;
+	top: 400px;
+	text-align: center;
 }
-
 .win {
 	color: green;
 	font-family: 'Pacifico', cursive;
@@ -110,7 +106,3 @@
 	color: black;
 	font-family: Arial;
 }
-
-/* #rock{
-  box-shadow: 5px 5px 5px red;
-} */
