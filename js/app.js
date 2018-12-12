@@ -21,7 +21,7 @@ const loseSpan = document.getElementById('loseSpan');
 let winCount = 0; //counts wins
 let drawCount = 0; //counts draws
 let loseCount = 0; //counts losses
-
+let isReset = true;
 //place opponent cards
 let picWidth = 100;
 let spaceTop = 12;
@@ -44,20 +44,23 @@ go.addEventListener('click', evaluate);
 newGame.addEventListener('click', reset);
 
 function evaluate(){
-  const opponentCard = Math.floor((Math.random() * 3));
-  console.log(opponentCard);
-  switch (opponentCard) {
-    case 0:
-    flipCardOne.style.transform = 'rotateY(180deg)';
-    break;
-    case 1:
-    flipCardTwo.style.transform = 'rotateY(180deg)';
-    break;
-    case 2:
-    flipCardThree.style.transform = 'rotateY(180deg)';
-    break;
+  if (isReset){
+    const opponentCard = Math.floor((Math.random() * 3));
+    console.log(opponentCard);
+    switch (opponentCard) {
+      case 0:
+      flipCardOne.style.transform = 'rotateY(180deg)';
+      break;
+      case 1:
+      flipCardTwo.style.transform = 'rotateY(180deg)';
+      break;
+      case 2:
+      flipCardThree.style.transform = 'rotateY(180deg)';
+      break;
+    }
+    arr[playerCard][opponentCard]();
+    isReset = false;
   }
-  arr[playerCard][opponentCard]();
 }
 
 function selectCard(){
@@ -103,4 +106,5 @@ function flipping(){
    message.classList.remove("win");
    message.classList.remove("lose");
    message.classList.remove("draw");
+   isReset = true; 
  }
