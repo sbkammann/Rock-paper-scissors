@@ -107,3 +107,5 @@ function flipping(){
    message.classList.remove("draw");
    isReset = true;
  }
+
+ window.addEventListener('resize', function(){location.reload();});
