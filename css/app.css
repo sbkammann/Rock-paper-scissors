@@ -6,7 +6,6 @@
   width: 128px;
   z-index: -1;
 }
-
 .flipCard {
   height: 128px;
   width: 128px;
@@ -15,19 +14,16 @@
   position: absolute;
   z-index: 0;
 }
-
 .front,
 .back {
 	backface-visibility: hidden;
 }
-
 .front {
 	z-index: 2;
 	transform: rotateY(0deg);
   position: absolute;
   top: 0;
 }
-
 .back {
   height: 150px;
   width: 100px;
@@ -36,7 +32,6 @@
 	transform: rotateY(-180deg);
   border: solid 2px black;
 }
-
 #box{
   margin: auto;
   width: 50%;
@@ -105,4 +100,18 @@ h1 {
 .draw {
 	color: black;
 	font-family: Arial;
+}
+.spanBox{
+	position: relative;
+	top: 290px;
+	width: 260px;
+	left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+span {
+	padding-right: 20px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
 }

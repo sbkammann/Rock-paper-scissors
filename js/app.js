@@ -1,8 +1,3 @@
-
-
-
-
-
 //determines whether the player has won or not
 const arr = [ [draw, lose, win],
               [win, draw, lose],
@@ -20,11 +15,14 @@ const containerOne = document.getElementById('one');
 const containerTwo = document.getElementById('two');
 const containerThree = document.getElementById('three');
 const containerArr = [containerOne, containerTwo, containerThree];
+const winSpan = document.getElementById('winSpan');
+const drawSpan = document.getElementById('drawSpan');
+const loseSpan = document.getElementById('loseSpan');
+let winCount = 0; //counts wins
+let drawCount = 0; //counts draws
+let loseCount = 0; //counts losses
 
 //place opponent cards
-//set position
-//height: 150px;
-
 let picWidth = 100;
 let spaceTop = 12;
 let spaceLeft = 15; //8
@@ -73,14 +71,21 @@ function selectCard(){
 }
 
 function win(){
+  winCount++;
+  winSpan.innerText = `Win: ${winCount}`;
+//combine top two lines?
   message.classList.toggle("win");
   message.innerText ="You win!";
 }
 function draw(){
+  drawCount++;
+  drawSpan.innerText = `Draw: ${drawCount}`;
   message.classList.toggle("draw");
   message.innerText ="Draw";
 }
 function lose(){
+  loseCount++;
+  loseSpan.innerText =`Lose: ${loseCount}`;
   message.classList.toggle("lose");
   message.innerText ="You lose...";
 }
